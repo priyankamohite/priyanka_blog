@@ -2,13 +2,20 @@
 class PostsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+    }
+
+
     public function index() {
         $this->set('posts', $this->Post->find('all'));
+        $this->set('roleType',$this->roleType());
     }
 
     public function view($id = null) {
         $this->Post->id = $id;
-        $this->set('post', $this->Post->find('all'));
+        $this->set('post', $this->Post->read());
     }
 
     public function add() {

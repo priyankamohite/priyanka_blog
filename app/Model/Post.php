@@ -8,5 +8,22 @@ class Post extends AppModel {
             'rule' => 'notEmpty'
         )
     );
+
+    public $name = 'Post';
+
+    public $hasMany = array(
+        'Comment' => array(
+            'className'     => 'Comment',
+            'foreignKey'    => 'post_id',
+            'dependent'     => true
+        )
+    );
+
+    public $belongsTo = array(
+        'User' => array(
+            'className'    => 'User',
+            'foreignKey'   => 'user_id'
+        )
+    );
 }
 ?>
