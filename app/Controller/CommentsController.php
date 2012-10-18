@@ -12,22 +12,15 @@ class CommentsController extends AppController {
     }
 
     public function add() {
-
         $this->log($this->request->data);
         if ($this->request->is('post')) {
             $this->Comment->create();
             if ($this->Comment->save($this->request->data)) {
-
-
                 if ($this->__sendRegistrationEmail()) {
-//                    pr($this->request->data);die;
                     $this->Session->setFlash(__('Mail has been sent to you on your email-id'));
-
                 } else {
                     $this->Session->setFlash(__('There may be some error, please try again'));
                 }
-
-
                 $this->Session->setFlash('Your post has been saved.');
                 $this->redirect(array('controller'=>'posts','action' => 'index'));
             } else {
@@ -39,7 +32,6 @@ class CommentsController extends AppController {
 
     public function __sendRegistrationEmail()
     {
-//                pr($this->request->data);die;
 
         if ($this->request->is('post') && !empty($this->request->data)) {
             $data['from'] = $this->request->data['Comment']['username'];
@@ -48,10 +40,23 @@ class CommentsController extends AppController {
             $data['toName'] = 'Admin';
             $data['template'] = 'verify_email'; // this the ctp which goes into your View/Emails/html/verify_email.ctp
             $data['subject'] = 'Comments';
-//            pr($data);die;
             $this->sendSmtpMail($data);
         }
         return true;
     }
+
+    public function update($id = null) {
+        $this->autoRender=false;
+        $this->Comment->id = $id;
+        $this->request->data=$this->Comment->find('first',array('condition'=>array('Comment.id'=>$id)));
+        $this->request->data['Comment']['is_approve']=1;
+            if ($this->Comment->save($this->request->data)) {
+                $this->Session->setFlash('Comment has been approved.');
+                $this->redirect(array('controller'=>'posts','action' => 'index'));
+            } else {
+                $this->Session->setFlash('Unable to approve comment.');
+            }
+        }
+
 }
 ?>

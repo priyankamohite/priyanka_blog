@@ -1,9 +1,4 @@
 
-
-
-
-
-
 <!--<div class="navbar navbar-inverse navbar-fixed-top">-->
 <!--    <div class="navbar-inner">-->
 <!--        <div class="container">-->
@@ -55,16 +50,6 @@
 <!--</div>-->
 <!---->
 <!---->
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="span12">
@@ -156,16 +141,23 @@
 
             <?php
 
-            if(!empty($roleType))
-            {
+
                 echo "Comments<br/><br/>";
                 foreach($post['Comment'] as $comment)
                 {
-                    echo "Commented by:".$comment['name']."<br/>";
-                    echo "Comment:".$comment['comment']."<br/>";
-                    echo "On:".$comment['created']."<br/>";
-                }
-            }
+                    if(!empty($comment['is_approve']) || !empty($roleType))
+                    {
+                        echo "Commented by:".$comment['name']."<br/>";
+                        echo "Comment:".$comment['comment']."<br/>";
+                        echo "On:".$comment['created']."<br/>";
+                        if(!empty($roleType))
+                        {
+                            echo $this->Html->link('Approve',array('controller'=>'comments','action'=>'update',$comment['id']));
+                            echo "<br/>";
+                        }
+                    }
+
+                 }
             ?> <br/><br/>
         </tr>
         <?php endforeach; ?>
