@@ -2,14 +2,18 @@
 class CommentsController extends AppController {
     public $helpers = array('Html', 'Form');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
+
     public function index() {
         $this->set('comments', $this->Comment->find('all'));
     }
 
     public function add() {
 
-//        pr($this->request->data);die;
-
+        $this->log($this->request->data);
         if ($this->request->is('post')) {
             $this->Comment->create();
             if ($this->Comment->save($this->request->data)) {

@@ -4,13 +4,14 @@ class PostsController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index');
+        $this->Auth->allow('index','view','login');
     }
 
 
     public function index() {
         $this->set('posts', $this->Post->find('all'));
         $this->set('roleType',$this->roleType());
+        $this->set('userId',$this->userLoggedIn());
     }
 
     public function view($id = null) {

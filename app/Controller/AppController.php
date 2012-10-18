@@ -46,7 +46,8 @@ class AppController extends Controller {
     {
         parent::beforeRender();
         $roleType=$this->roleType();
-        $this->set(compact('roleType'));
+        $userId=$this->userLoggedIn();
+        $this->set(compact('roleType','userId'));
     }
     public function sendSmtpMail($data = array()) {
 
@@ -78,6 +79,15 @@ class AppController extends Controller {
             return true;// Admin
         else
             return false;//normal user
+    }
+
+    public function userLoggedIn()
+    {
+        $userId= $this->Auth->user('id');
+        if(!empty($userId))
+            return $userId;
+        else
+            return false;
     }
 
 }

@@ -1,9 +1,7 @@
 <?php //pr($post);die; ?>
-<?php echo $post['Post']['title']; ?>
-
-Created: <?php echo $post['Post']['created']; ?>
-
-<?php echo $post['Post']['body']; ?>
+<?php echo $post['Post']['title']; ?><br/>
+<?php echo $post['Post']['body']; ?><br/>
+Created On: <?php echo $post['Post']['created']; ?><br/>
 
 
 <h1>Add Comment</h1>
