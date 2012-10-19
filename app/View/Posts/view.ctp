@@ -28,6 +28,9 @@
         });
     });
 </script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js">
+    CKEDITOR.replace( 'editor' );
+</script>
     <div class="span12">
         <strong><p class="text-info lead"> <?php echo $post['Post']['title']; ?><br/></p></strong>
         <p class="text-warning lead"><?php echo $post['Post']['body']; ?><br/></p>
@@ -41,7 +44,13 @@
         echo $this->Form->create('Comment',array('controller'=>'comments','action'=>'add'));
         echo $this->Form->input('name',array('id'=>'name'));
         echo $this->Form->input('username',array('id'=>'username'));
-        echo $this->Form->input('comment', array('rows' => '3','id'=>'comment'));
+//                echo $this->Form->input('comment', array('rows' => '3','id'=>'comment'));
+//        echo $this->Fck->ckedit('Comment.comment');?>
+        <textarea id="editor" name="editor"></textarea>
+        <script type="text/javascript" >
+        CKEDITOR.replace( 'editor' );
+        </script>
+        <?php
         echo $this->Form->hidden('post_id',array('value'=>$post['Post']['id']));
         echo $this->Form->end('Submit');
         ?>

@@ -54,4 +54,8 @@ class PostsController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
     }
+
+    public function ckeditor() {
+
+    }
 }

@@ -14,9 +14,13 @@ class CommentsController extends AppController {
     public function add() {
         $this->log($this->request->data);
         if ($this->request->is('post')) {
+//            pr($_POST);die;
+            $this->request->data['Comment']['comment']=$_POST['editor'];
+//            pr($this->request->data);die;
             $this->Comment->create();
             if ($this->Comment->save($this->request->data)) {
                 if ($this->__sendRegistrationEmail()) {
+
                     $this->Session->setFlash(__('Mail has been sent to you on your email-id'));
                 } else {
                     $this->Session->setFlash(__('There may be some error, please try again'));
@@ -36,7 +40,8 @@ class CommentsController extends AppController {
         if ($this->request->is('post') && !empty($this->request->data)) {
             $data['from'] = $this->request->data['Comment']['username'];
             $data['fromName'] = $this->request->data['Comment']['name'];
-            $data['to'] = 'priyankamohite@yopmail.com';
+//            $data['to'] = 'priyankamohite@yopmail.com';
+            $data['to'] = 'mohitepriya19@gmail.com';
             $data['toName'] = 'Admin';
             $data['template'] = 'verify_email'; // this the ctp which goes into your View/Emails/html/verify_email.ctp
             $data['subject'] = 'Comments';

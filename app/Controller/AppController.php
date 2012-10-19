@@ -42,6 +42,7 @@ class AppController extends Controller {
         'SwiftMailer'
     );
 
+    public $helpers=array('Js');
 
 
     public function beforeRender()
@@ -53,7 +54,7 @@ class AppController extends Controller {
     }
     public function sendSmtpMail($data = array()) {
 
-//        pr($data);die;
+//       pr($data);die;
         $this->SwiftMailer->from = $data['from'];
         $this->SwiftMailer->fromName = $data['fromName'];
         $this->SwiftMailer->to = $data['to'];
