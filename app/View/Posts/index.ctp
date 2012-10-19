@@ -1,26 +1,94 @@
 
-<!--<div class="navbar navbar-inverse navbar-fixed-top">-->
-<!--    <div class="navbar-inner">-->
-<!--        <div class="container">-->
-<!--            <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--            </button>-->
-<!--            <a href="/" class="brand">Blog</a>-->
-<!--            <div class="span8">-->
-<!--                <h1>BLOG</h1>-->
-<!--            </div>-->
-<!--            <div class="span4">-->
-<!--                --><?php //echo $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
-<!--                <table cellspacing="0" class="color-white">-->
-<!--                    <tbody>-->
-<!--                    <tr>-->
+<script type="text/javascript">
+    var SelfID = jQuery(this).attr("id");
+
+    jQuery(function(){
+        jQuery("#username").validate({
+            expression: "if (VAL) return true; else return false;;",
+            message: "Please enter usename"
+        });
+        jQuery("#name").validate({
+            expression: "if (VAL) return true; else return false;;",
+            message: "Please enter password"
+        });
+    });
+
+
+
+</script>
+
+
+
+
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="span8">
+                <h1>BLOG</h1>
+            </div>
+            <div class="span4">
+                <?php echo $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
+                <table cellspacing="0" class="color-white">
+                    <tbody>
+                    <tr>
+
+                        <?php
+                        if(empty($userId))
+                        {
+                            ?>
+
+                            <td>
+                                <?php echo $this->Form->input('username',array('id'=>'username'));?>
+                            </td>
+                            <td>
+                                <?php echo $this->Form->input('password', array('id'=>'password')); ?>
+                            </td>
+                            <td>
+                                <?php
+                                echo $this->Form->input('Sign in', array('type'=>'submit','class' => 'btn','label'=>false));
+                                echo $this->Form->end(); ?>
+                            </td>
+                            <?php }
+
+                        else {
+                            ?>
+                            <td>
+                                <?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));?>
+                            </td>
+                            <?php } ?>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!---->
-<!--                        --><?php
-//                        if(empty($userId))
-//                        {
-//                            ?>
+<!--<div class="span12">-->
+<!--    <div class="headertop">-->
+<!--        <div class="row">-->
+<!--            <span class="navbar navbar-inverse">-->
+<!--                <div class="span8">-->
+<!--                    <h1>BLOG</h1>-->
+<!--                </div>-->
+<!--                <div class="span4">-->
+<!--                   --><?php //echo $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
+<!--                    <table cellspacing="0" class="color-white">-->
+<!--                        <tbody>-->
+<!--                        <tr>-->
+<!---->
+<!--                            --><?php
+//                                if(empty($userId))
+//                                {
+//                                ?>
 <!---->
 <!--                            <td>-->
 <!--                                --><?php //echo $this->Form->input('username', array('class' => "html7magic"));?>
@@ -29,77 +97,30 @@
 <!--                                --><?php //echo $this->Form->input('password', array('class' => "html7magic")); ?>
 <!--                            </td>-->
 <!--                            <td>-->
-<!--                                --><?php
+                                <?php
 //                                echo $this->Form->input('Sign in', array('type'=>'submit','class' => 'btn btn-pink-login','label'=>false));
 //                                echo $this->Form->end(); ?>
-<!--                            </td>-->
-<!--                            --><?php //}
-//
-//                        else {
+                            </td>
+<!--                                --><?php //}
+
+//                                else {
 //                            ?>
 <!--                            <td>-->
 <!--                                --><?php //echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));?>
 <!--                            </td>-->
-<!--                            --><?php //} ?>
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
+<!--                             --><?php //} ?>
+                        </tr>
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </span>-->
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
-<!---->
-<!---->
-
-
-<div class="span12">
-    <div class="row">
-        <span class="navbar navbar-inverse">
-            <div class="span8">
-                <h1>BLOG</h1>
-            </div>
-            <div class="span4">
-               <?php echo $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
-                <table cellspacing="0" class="color-white">
-                    <tbody>
-                    <tr>
-
-                        <?php
-                            if(empty($userId))
-                            {
-                            ?>
-
-                        <td>
-                            <?php echo $this->Form->input('username', array('class' => "html7magic"));?>
-                        </td>
-                        <td>
-                            <?php echo $this->Form->input('password', array('class' => "html7magic")); ?>
-                        </td>
-                        <td>
-                            <?php
-                            echo $this->Form->input('Sign in', array('type'=>'submit','class' => 'btn btn-pink-login','label'=>false));
-                            echo $this->Form->end(); ?>
-                        </td>
-                            <?php }
-
-                            else {
-                        ?>
-                        <td>
-                            <?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));?>
-                        </td>
-                         <?php } ?>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </span>
-    </div>
-</div>
 
 <div class="span12">
 
     <?php
-//    pr($posts);die;
     if(!empty($roleType))
     {
     echo $this->Html->link('Add Post', array('controller' => 'posts', 'action' => 'add'));
@@ -110,14 +131,17 @@
 
         <?php foreach ($posts as $post): ?>
         <tr>
-            <?php echo $this->Html->link($post['Post']['title'],
-            array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?><br/>
-        </tr>
-        <tr class="error">
-            <?php echo $post['Post']['body']?><br/>
+            <p class="text-warning lead"> <?php echo $this->Html->link($post['Post']['title'],
+            array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></p><br/>
         </tr>
         <tr>
-            Created On:<?php echo $post['Post']['created']; ?><br/>
+            <p class="text-warning lead"> <?php echo $post['Post']['body']?><br/></p>
+        </tr>
+        <tr>
+            Created On:<?php
+            $date=$post['Post']['created'];
+            echo date('Y-m-d', strToTime($date));
+            ?><br/>
         </tr>
 
         <tr>
@@ -139,17 +163,17 @@
         </tr>
         <tr>
 
-            <?php
-
-
-                echo "Comments<br/><br/>";
+            <p class="text-error lead"> <?php echo "Comments";?></p><?php
                 foreach($post['Comment'] as $comment)
                 {
                     if(!empty($comment['is_approve']) || !empty($roleType))
-                    {
-                        echo "Commented by:".$comment['name']."<br/>";
-                        echo "Comment:".$comment['comment']."<br/>";
-                        echo "On:".$comment['created']."<br/>";
+                    {?>
+
+                        <?php echo $comment['comment']."<br/>";
+                        echo "Commented by ".$comment['name'];
+                        $date=$comment['created'];
+                        echo " On: ".date('Y-m-d', strToTime($date));
+
                         if(!empty($roleType))
                         {
                             echo $this->Html->link('Approve',array('controller'=>'comments','action'=>'update',$comment['id']));
