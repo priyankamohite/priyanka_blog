@@ -44,8 +44,7 @@
         echo $this->Form->create('Comment',array('controller'=>'comments','action'=>'add'));
         echo $this->Form->input('name',array('id'=>'name'));
         echo $this->Form->input('username',array('id'=>'username'));
-//                echo $this->Form->input('comment', array('rows' => '3','id'=>'comment'));
-//        echo $this->Fck->ckedit('Comment.comment');?>
+        echo "Comment";?>
         <textarea id="editor" name="editor"></textarea>
         <script type="text/javascript" >
         CKEDITOR.replace( 'editor' );

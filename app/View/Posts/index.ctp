@@ -23,7 +23,6 @@
 <div class="navbar navbar-inverse">
     <div class="navbar-inner">
         <div class="container">
-            <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -102,7 +101,7 @@
 
             if(!empty($roleType)){?>
 
-                    <?php echo $this->Html->link('Edit', array('action' => 'edit', $post['Post']['id'])); ?>
+                    <?php echo $this->Html->link('Edit', array('action' => 'edit', $post['Post']['id'])); ?>&nbsp;&nbsp;
                     <?php echo $this->Form->postLink(
                     'Delete',
                     array('action' => 'delete', $post['Post']['id']),
@@ -115,17 +114,17 @@
                 foreach($post['Comment'] as $comment)
                 {
                     if(!empty($comment['is_approve']) || !empty($roleType))
-                    {?>
+                    {
 
-                        <?php echo $comment['comment']."<br/>";
+                         echo $comment['comment']."<br/>";
                         echo "Commented by ".$comment['name'];
                         $date=$comment['created'];
                         echo " On: ".date('Y-m-d', strToTime($date))."<br/>";
 
-                        if(!empty($roleType))
+                        if(!empty($roleType) && !empty($comment['is_approve']))
                         {
                             echo $this->Html->link('Approve',array('controller'=>'comments','action'=>'update',$comment['id']));
-                            echo "<br/>";
+                            echo "<br/><br/>";
                         }
                     }
 
