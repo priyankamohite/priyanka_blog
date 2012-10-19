@@ -6,14 +6,25 @@
             expression: "if (VAL) return true; else return false;;",
             message: "Please enter usename"
         });
+
+        jQuery("#name").validate({
+            expression: "if (VAL.match(/^[a-zA-z ]*$/)) return true; else return false;;",
+            message: "Please enter valid name"
+        });
+
         jQuery("#username").validate({
             expression: "if (VAL) return true; else return false;;",
-            message: "Please enter password"
+            message: "Please enter username"
+        });
+
+        jQuery("#username").validate({
+            expression: "if (VAL.match(/^[^\\W][a-zA-Z0-9\\_\\-\\.]+([a-zA-Z0-9\\_\\-\\.]+)*\\@[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+)*\\.[a-zA-Z]{2,4}$/)) return true; else return false;;",
+            message: "Please enter valid  username"
         });
 
         jQuery("#comment").validate({
             expression: "if (VAL) return true; else return false;;",
-            message: "Please enter password"
+            message: "Please enter comment"
         });
     });
 </script>

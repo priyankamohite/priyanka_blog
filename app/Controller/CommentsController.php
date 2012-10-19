@@ -21,7 +21,7 @@ class CommentsController extends AppController {
                 } else {
                     $this->Session->setFlash(__('There may be some error, please try again'));
                 }
-                $this->Session->setFlash('Your post has been saved.');
+                $this->Session->setFlash('Your Comment has been saved.');
                 $this->redirect(array('controller'=>'posts','action' => 'index'));
             } else {
                 $this->Session->setFlash('Unable to add your post.');
