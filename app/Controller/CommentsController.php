@@ -48,7 +48,7 @@ class CommentsController extends AppController {
     public function update($id = null) {
         $this->autoRender=false;
         $this->Comment->id = $id;
-        $this->request->data=$this->Comment->find('first',array('condition'=>array('Comment.id'=>$id)));
+        $this->request->data=$this->Comment->find('first',array('conditions'=>array('Comment.id'=>$id)));
         $this->request->data['Comment']['is_approve']=1;
             if ($this->Comment->save($this->request->data)) {
                 $this->Session->setFlash('Comment has been approved.');
