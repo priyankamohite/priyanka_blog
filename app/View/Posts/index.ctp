@@ -7,18 +7,12 @@
             expression: "if (VAL) return true; else return false;;",
             message: "Please enter usename"
         });
-        jQuery("#name").validate({
+        jQuery("#password").validate({
             expression: "if (VAL) return true; else return false;;",
             message: "Please enter password"
         });
     });
-
-
-
 </script>
-
-
-
 
 <div class="navbar navbar-inverse">
     <div class="navbar-inner">
@@ -69,55 +63,6 @@
     </div>
 </div>
 
-
-
-<!---->
-<!--<div class="span12">-->
-<!--    <div class="headertop">-->
-<!--        <div class="row">-->
-<!--            <span class="navbar navbar-inverse">-->
-<!--                <div class="span8">-->
-<!--                    <h1>BLOG</h1>-->
-<!--                </div>-->
-<!--                <div class="span4">-->
-<!--                   --><?php //echo $this->Form->create('User',array('controller'=>'users','action'=>'login')); ?>
-<!--                    <table cellspacing="0" class="color-white">-->
-<!--                        <tbody>-->
-<!--                        <tr>-->
-<!---->
-<!--                            --><?php
-//                                if(empty($userId))
-//                                {
-//                                ?>
-<!---->
-<!--                            <td>-->
-<!--                                --><?php //echo $this->Form->input('username', array('class' => "html7magic"));?>
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                --><?php //echo $this->Form->input('password', array('class' => "html7magic")); ?>
-<!--                            </td>-->
-<!--                            <td>-->
-                                <?php
-//                                echo $this->Form->input('Sign in', array('type'=>'submit','class' => 'btn btn-pink-login','label'=>false));
-//                                echo $this->Form->end(); ?>
-                            </td>
-<!--                                --><?php //}
-
-//                                else {
-//                            ?>
-<!--                            <td>-->
-<!--                                --><?php //echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));?>
-<!--                            </td>-->
-<!--                             --><?php //} ?>
-                        </tr>
-<!--                        </tbody>-->
-<!--                    </table>-->
-<!--                </div>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 <div class="span12">
 
     <?php
@@ -157,12 +102,9 @@
                     array('action' => 'delete', $post['Post']['id']),
                     array('confirm' => 'Are you sure?'));
                     ?>
-
                 <?php } ?><br/><br/><br/>
-
         </tr>
         <tr>
-
             <p class="text-error lead"> <?php echo "Comments";?></p><?php
                 foreach($post['Comment'] as $comment)
                 {
@@ -172,7 +114,7 @@
                         <?php echo $comment['comment']."<br/>";
                         echo "Commented by ".$comment['name'];
                         $date=$comment['created'];
-                        echo " On: ".date('Y-m-d', strToTime($date));
+                        echo " On: ".date('Y-m-d', strToTime($date))."<br/>";
 
                         if(!empty($roleType))
                         {

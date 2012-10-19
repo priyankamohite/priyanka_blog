@@ -22,6 +22,9 @@
     <?php
     echo $this->Html->css(array('bootstrap','bootstrap-responsive','new'));
     echo $this->Html->script(array('jquery/jquery','jquery.validate','jquery.validation.functions'));
+    echo $this->fetch('script');
+    echo $this->Html->meta('icon');
+    echo $this->fetch('meta');
 //    echo $this->Html->css('bootstrap-responsive');
 //    echo $this->Html->css('docs');
 //    echo $this->Html->css('prettify');

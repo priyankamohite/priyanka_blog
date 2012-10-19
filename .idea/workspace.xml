@@ -22,22 +22,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="81" selection-start="1566" selection-end="1566" vertical-scroll-proportion="-13.125">
+            <state line="116" column="75" selection-start="4110" selection-end="4110" vertical-scroll-proportion="1.0212464">
               <folding>
-                <marker date="1350629298000" expanded="true" signature="1483:1546" placeholder="..." />
-                <marker date="1350629298000" expanded="true" signature="1653:1748" placeholder="..." />
+                <marker date="1350631727000" expanded="true" signature="1481:1544" placeholder="..." />
+                <marker date="1350631727000" expanded="true" signature="1651:1746" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="24" selection-start="448" selection-end="448" vertical-scroll-proportion="-8.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="50" selection-start="438" selection-end="438" vertical-scroll-proportion="-6.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="32" selection-start="268" selection-end="268" vertical-scroll-proportion="0.16438356">
+            <state line="12" column="64" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="16" selection-start="798" selection-end="842" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,12 +104,12 @@
         <option value="$PROJECT_DIR$/app/Config/Migration/1350564423_add_is_approve_in_comments.php" />
         <option value="$PROJECT_DIR$/app/Controller/CommentsController.php" />
         <option value="$PROJECT_DIR$/app/webroot/css/bootstrap-responsive.css" />
-        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/app/webroot/css/new.css" />
+        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Posts/index.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/index.ctp" />
       </list>
     </option>
   </component>
@@ -160,6 +196,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog_assignment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,11 +368,6 @@
         <state line="23" column="36" selection-start="481" selection-end="481" vertical-scroll-proportion="0.48660085" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/CommentsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.41095892" />
@@ -323,13 +376,6 @@
     <entry file="file://$PROJECT_DIR$/app/webroot/css/bootstrap-responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="14" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="61" selection-end="61" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/css/new.css">
@@ -346,6 +392,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="448" selection-end="448" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="50" selection-start="438" selection-end="438" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="0" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0">
@@ -353,55 +413,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/jquery.js">
+    <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/jquery.validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6713681">
+        <state line="26" column="16" selection-start="798" selection-end="842" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/jquery.validation.functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="501" selection-end="501" vertical-scroll-proportion="0.2549575">
-          <folding>
-            <marker date="1350628802000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1350628802000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="81" selection-start="1566" selection-end="1566" vertical-scroll-proportion="-13.125">
-          <folding>
-            <marker date="1350629298000" expanded="true" signature="1483:1546" placeholder="..." />
-            <marker date="1350629298000" expanded="true" signature="1653:1748" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="268" selection-end="268" vertical-scroll-proportion="0.16438356">
+        <state line="12" column="64" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="75" selection-start="4110" selection-end="4110" vertical-scroll-proportion="1.0212464">
+          <folding>
+            <marker date="1350631727000" expanded="true" signature="1481:1544" placeholder="..." />
+            <marker date="1350631727000" expanded="true" signature="1651:1746" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
